@@ -1,5 +1,6 @@
 'use client'
 
+import { fixWidows } from '@/lib/typography'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 
@@ -54,7 +55,7 @@ export default function Tools() {
 				viewport={{ once: true }}
 				className='text-2xl md:text-5xl font-bold mb-8 font-[Russo_One]'
 			>
-				Программы, в которых я работаю:
+				Программы, в{'\u00A0'}которых я{'\u00A0'}работаю:
 			</motion.h2>
 
 			<motion.div
@@ -87,7 +88,7 @@ export default function Tools() {
 							{tool.name}
 						</h3>
 						<p className='text-base md:text-3xl text-[#333]'>
-							{tool.description}
+							{fixWidows(tool.description)}
 						</p>
 					</motion.div>
 				))}

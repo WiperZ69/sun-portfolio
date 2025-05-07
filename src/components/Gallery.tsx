@@ -29,7 +29,7 @@ export default function ExpandableGallery({
 		<div className='mt-6'>
 			<button
 				onClick={() => setIsOpen(!isOpen)}
-				className='w-full text-left text-2xl md:text-4xl font-semibold bg-gray-200 font-[Russo_One] px-4 py-3 rounded-lg transition-all hover:bg-gray-300 cursor-pointer'
+				className='w-full text-left text-2xl md:text-4xl font-semibold bg-[#E6E7F3] font-[Russo_One] px-4 py-3 rounded-lg transition-all hover:bg-[#F3F3FA] cursor-pointer'
 			>
 				{title}
 				<span className='float-left'>{isOpen ? '▲' : '▼'}</span>

@@ -46,13 +46,14 @@ export default function Services() {
 					>
 						<h3 className='text-lg md:text-4xl font-medium mb-4'>WEB дизайн</h3>
 						<p className='mb-3 text-base md:text-3xl'>
-							Создаю удобные и стильные сайты, которые работают на любом
-							устройстве.
+							Создаю удобные и{'\u00A0'}стильные сайты, которые работают на
+							{'\u00A0'}любом устройстве.
 						</p>
 						<p className='text-base md:text-3xl'>
-							Специализируюсь на лендингах, корпоративных сайтах и
-							интернет-магазинах — делаю их не только красивыми, но и
-							по-настоящему удобными для пользователей.
+							Специализируюсь на{'\u00A0'}лендингах, корпоративных сайтах и
+							{'\u00A0'}интернет-магазинах — делаю их{'\u00A0'}не{'\u00A0'}
+							только красивыми, но{'\u00A0'}и{'\u00A0'}по-настоящему удобными
+							для{'\u00A0'}пользователей.
 						</p>
 						<Image
 							className='absolute -bottom-5.5 -right-0.5 md:-bottom-7 md:-right-7 group-hover:bg-[url(/fArrow.svg)] transition-all duration-300 bg-no-repeat bg-bottom pointer-events-none'
@@ -67,19 +68,21 @@ export default function Services() {
 					<motion.div
 						variants={cardVariants}
 						whileHover={{ scale: 1 }}
-						className='group bg-[#898CAB] text-white rounded-2xl p-6 shadow-lg relative hover:bg-[#8387C4] transition-all duration-300'
+						className='group bg-[#898CAB] text-[#e6e7f3] rounded-2xl p-6 shadow-lg relative hover:bg-[#8387C4] transition-all duration-300'
 					>
 						<h3 className='text-lg md:text-4xl font-medium mb-4'>
-							Инфографика и визуализация
+							Инфографика и{'\u00A0'}визуализация
 						</h3>
 						<p className='mb-3 text-base md:text-3xl'>
-							Беру скучные цифры и превращаю их в яркие визуальные истории.
-							Делаю инфографику, которая действительно работает — для
-							маркетплейсов, сайтов и презентаций.
+							Беру скучные цифры и{'\u00A0'}превращаю их{'\u00A0'}в{'\u00A0'}
+							яркие визуальные истории. Делаю инфографику, которая действительно
+							работает — для{'\u00A0'}маркетплейсов, сайтов и{'\u00A0'}
+							презентаций.
 						</p>
 						<p className='text-base md:text-3xl'>
-							Мои диаграммы и схемы говорят сами за себя, причём одинаково
-							хорошо смотрятся и на экране, и на бумаге.
+							Мои диаграммы и{'\u00A0'}схемы говорят сами за{'\u00A0'}себя,
+							причём одинаково хорошо смотрятся и{'\u00A0'}на{'\u00A0'}экране, и
+							{'\u00A0'}на{'\u00A0'}бумаге.
 						</p>
 						<Image
 							className='absolute -bottom-5.5 -right-0.5 md:-bottom-7 md:-right-7 group-hover:bg-[url(/fArrow.svg)] transition-all duration-300 bg-no-repeat bg-bottom pointer-events-none'

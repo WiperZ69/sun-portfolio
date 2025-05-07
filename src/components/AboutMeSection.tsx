@@ -1,9 +1,18 @@
 'use client'
 
+import { fixWidows } from '@/lib/typography'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 
 export default function AboutMeSection() {
+	const pOne =
+		'Я — дизайнер из Иркутска, создающий визуальные решения для цифровых продуктов. Специализируюсь на инфографике, веб-интерфейсах и презентациях.'
+	const pTwo =
+		'Моя философия: баланс эстетики и функциональности. Работаю, чтобы продукты не только привлекали внимание, но и превращали сложное в простое.'
+	const pThree = 'Визуализирую даже списки покупок'
+	const pFour = 'В детстве рисовала на обоях… Теперь это называется UX-скетчинг'
+	const pFive = 'Калининград-Москва: собираю города по кусочкам, как арт-проект'
+	const pSix = 'Могу выписывать узоры неделю, но собрать чемодан — за час'
 	return (
 		<section className='py-8 sm:py-16 px-4 sm:px-6 md:px-8 lg:px-12'>
 			<div className='max-w-5xl mx-auto flex flex-col gap-20'>
@@ -41,14 +50,10 @@ export default function AboutMeSection() {
 						viewport={{ once: true }}
 						className='lg:w-1/2 text-xl sm:text-3xl text-secondary leading-relaxed font-inter text-center lg:text-left'
 					>
-						Я — дизайнер из Иркутска, создающий визуальные решения для цифровых
-						продуктов. Специализируюсь на инфографике, веб-интерфейсах и
-						презентациях.
+						{fixWidows(pOne)}
 						<br />
 						<br />
-						Моя философия: баланс эстетики и функциональности. Работаю, чтобы
-						продукты не только привлекали внимание, но и превращали сложное в
-						простое.
+						{fixWidows(pTwo)}
 					</motion.p>
 				</motion.div>
 
@@ -87,18 +92,18 @@ export default function AboutMeSection() {
 						className='lg:w-1/2 text-xl sm:text-3xl text-secondary space-y-6 font-inter'
 					>
 						{[
-							{ img: '/one.png', text: 'Визуализирую даже списки покупок' },
+							{ img: '/one.png', text: fixWidows(pThree) },
 							{
 								img: '/two.png',
-								text: 'В детстве рисовала на обоях… Теперь это называется UX-скетчинг',
+								text: fixWidows(pFour),
 							},
 							{
 								img: '/three.png',
-								text: 'Калининград-Москва: собираю города по кусочкам, как арт-проект',
+								text: fixWidows(pFive),
 							},
 							{
 								img: '/four.png',
-								text: 'Могу выписывать узоры неделю, но собрать чемодан — за час',
+								text: fixWidows(pSix),
 							},
 						].map((item, index) => (
 							<motion.li
