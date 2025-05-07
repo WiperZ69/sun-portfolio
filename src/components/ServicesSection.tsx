@@ -44,7 +44,9 @@ export default function Services() {
 						whileHover={{ scale: 1 }}
 						className='group bg-[#898CAB] text-[#e6e7f3] rounded-2xl p-6 shadow-lg relative hover:bg-[#8387C4] transition-all duration-300'
 					>
-						<h3 className='text-lg md:text-4xl font-medium mb-4'>WEB дизайн</h3>
+						<h3 className='text-[#F5F5F8] text-lg md:text-4xl font-medium mb-4'>
+							WEB дизайн
+						</h3>
 						<p className='mb-3 text-base md:text-3xl'>
 							Создаю удобные и{'\u00A0'}стильные сайты, которые работают на
 							{'\u00A0'}любом устройстве.
@@ -70,7 +72,7 @@ export default function Services() {
 						whileHover={{ scale: 1 }}
 						className='group bg-[#898CAB] text-[#e6e7f3] rounded-2xl p-6 shadow-lg relative hover:bg-[#8387C4] transition-all duration-300'
 					>
-						<h3 className='text-lg md:text-4xl font-medium mb-4'>
+						<h3 className='text-[#F5F5F8] text-lg md:text-4xl font-medium mb-4'>
 							Инфографика и{'\u00A0'}визуализация
 						</h3>
 						<p className='mb-3 text-base md:text-3xl'>
