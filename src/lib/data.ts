@@ -4,7 +4,7 @@ export const projects = [
 	{
 		id: 1,
 		uptitle: 'Сайт Tilda',
-		title: '/images/names/altai.svg',
+		title: '/images/names/altai.png',
 		name: 'Altai Terra',
 		image: '/images/projects/altai_glamp.png',
 		description:
