@@ -1,5 +1,5 @@
 import Contact from './ContactSection'
 
-export default function Header() {
+export default function Footer() {
 	return <Contact />
 }

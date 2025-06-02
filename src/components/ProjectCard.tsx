@@ -29,13 +29,13 @@ export default function ProjectCard({
 					height={250}
 					className='object-cover w-full h-auto pb-8 px-8'
 				/>
-				<div className='min-h-30 rounded-br-2xl rounded-bl-2xl bg-[#3b414f]'>
+				<div className='flex items-center min-h-30 rounded-br-2xl rounded-bl-2xl bg-[#3b414f]'>
 					<Image
 						src={title}
 						alt={uptitle}
 						width={400}
 						height={56}
-						className='object-cover w-auto h-auto py-8 px-8'
+						className='object-cover w-auto h-auto px-8'
 					/>
 				</div>
 			</div>

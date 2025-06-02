@@ -27,9 +27,9 @@ export default function RootLayout({
 	return (
 		<html lang='ru' className={`${inter.className}`}>
 			<body>
-				<Hero /> {/* Всегда сверху */}
-				<main className='flex-grow'>{children}</main> {}
-				<Footer /> {/* Всегда снизу */}
+				<Hero />
+				<main className='flex-grow'>{children}</main>
+				<Footer />
 			</body>
 		</html>
 	)

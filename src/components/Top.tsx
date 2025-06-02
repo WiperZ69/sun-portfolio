@@ -8,7 +8,6 @@ export default function Hero() {
 	return (
 		<section className='min-h-screen bg-gradient-to-r from-[#8387c4] flex items-center justify-center px-4 sm:px-6 md:px-8 lg:px-12 py-16 md:py-0'>
 			<div className='max-w-7xl w-full flex flex-col-reverse md:flex-row items-center justify-between gap-12 md:gap-0 relative'>
-				{/* Левая часть: текст */}
 				<motion.div
 					className='text-center md:text-left w-full md:w-1/2 space-y-8 z-10'
 					initial={{ opacity: 0, y: 40 }}
@@ -30,10 +29,8 @@ export default function Hero() {
 						Узнать больше
 					</Link>
 				</motion.div>
-
-				{/* Правая часть: изображение */}
 				<motion.div
-					className='w-full md:w-1/2 flex justify-center md:justify-end'
+					className='w-full sm:w-8/12 lg:w-10/12 flex justify-center md:justify-end'
 					initial={{ opacity: 0, x: 60 }}
 					animate={{ opacity: 1, x: 0 }}
 					transition={{ duration: 1, ease: 'easeOut', delay: 0.3 }}
@@ -41,10 +38,11 @@ export default function Hero() {
 					<Image
 						src='/top_me.png'
 						alt='Web Designer'
-						className='drop-shadow-md w-[70%] sm:w-[60%] md:w-auto h-auto'
+						className='drop-shadow-md w-[70%] sm:w-[60%] lg:w-[80%] md:w-[70%] h-auto'
 						priority
-						width={676}
-						height={686}
+						quality={100}
+						width={687}
+						height={676}
 					/>
 				</motion.div>
 			</div>

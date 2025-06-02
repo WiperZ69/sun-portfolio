@@ -3,6 +3,7 @@
 import { fixWidows } from '@/lib/typography'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
+import { useEffect, useState } from 'react'
 
 const tools = [
 	{
@@ -32,6 +33,12 @@ const tools = [
 ]
 
 export default function Tools() {
+	const [isMounted, setIsMounted] = useState(false)
+
+	useEffect(() => {
+		setIsMounted(true)
+	}, [])
+
 	const container = {
 		hidden: {},
 		show: {
@@ -46,6 +53,40 @@ export default function Tools() {
 		show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } },
 	}
 
+	if (!isMounted) {
+		return (
+			<section className='px-4 py-6 sm:py-12 mx-auto max-w-5xl'>
+				<h2 className='text-2xl md:text-5xl font-bold mb-8 font-[Russo_One]'>
+					Программы, в{'\u00A0'}которых я{'\u00A0'}работаю:
+				</h2>
+				<div className='grid grid-cols-1 sm:grid-cols-2 gap-6 group'>
+					{tools.map(tool => (
+						<div
+							key={tool.name}
+							className='bg-[#C6C6DB] text-black p-6 rounded-2xl flex flex-col gap-2 transition-all duration-300 ease-in-out group-hover:blur-[3px] hover:!blur-none'
+						>
+							<div className='h-[48px] w-[48px] md:w-auto md:h-auto'>
+								<Image
+									src={tool.icon}
+									alt={tool.name}
+									width={70}
+									height={70}
+									className='transition-all duration-200 ease-in-out'
+								/>
+							</div>
+							<h3 className='py-3 md:py-8 font-semibold text-xl md:text-4xl'>
+								{tool.name}
+							</h3>
+							<p className='text-base md:text-3xl text-[#333]'>
+								{fixWidows(tool.description)}
+							</p>
+						</div>
+					))}
+				</div>
+			</section>
+		)
+	}
+
 	return (
 		<section className='px-4 py-6 sm:py-12 mx-auto max-w-5xl'>
 			<motion.h2
@@ -57,7 +98,6 @@ export default function Tools() {
 			>
 				Программы, в{'\u00A0'}которых я{'\u00A0'}работаю:
 			</motion.h2>
-
 			<motion.div
 				variants={container}
 				initial='hidden'
@@ -69,11 +109,7 @@ export default function Tools() {
 					<motion.div
 						key={tool.name}
 						variants={cardVariants}
-						className='
-							bg-[#C6C6DB] text-black p-6 rounded-2xl flex flex-col gap-2 
-							transition-all duration-300 ease-in-out 
-							group-hover:blur-[3px] hover:!blur-none
-						'
+						className='bg-[#C6C6DB] text-black p-6 rounded-2xl flex flex-col gap-2 transition-all duration-300 ease-in-out group-hover:blur-[3px] hover:!blur-none'
 					>
 						<div className='h-[48px] w-[48px] md:w-auto md:h-auto'>
 							<Image
